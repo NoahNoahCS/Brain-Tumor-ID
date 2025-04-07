@@ -1,59 +1,58 @@
 ------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------
+
 ## Brain Tumor ID System
 =========================
 
 ### Executive Summary
 
-... As cancer rates rise it is crucial increase hospital efficiency if we want to continue to give quality care to our most at-risk patients. The project will help diagnose brain tumors given genetic information. 
-... The project consists of two parts. 
-    1. Using genetic data, the information will be used to predict what kind of cancer a patient has. In our current dataset the two types of tumor that are being predicted are Glioblastoma Multiforme (GBM) and Low Grade Glioma (LGG)  
-    2. A recommendation model will provide a suggestion for a treatment plan for the patient given their patient info, past treatment info, and the specific type of tumor.
-... Key takeaways
+... As the digitzation and analysis of genetic information is increasingly accessible and efficient, it is important for the medical community to have a robust understanding of the genetic traits of tumors. This will better inform diagnostic procedures, drug manufacturing, health insurance practices, and how to direct future research.
+... The primary goal of this project is to explore the genetic differences between two different tyeps of tumors, the Glioblastoma Multiforme, and the Low Grade Glioma. Based on the findings a model will be created to predict what cancer a tumor is between these two types based on user-input information.
+
 
 ### Demo
 
 ... Show your work:
 ...     Data visualizations
-...     Interactive demo (e.g., `streamlit` app)
-...     Short video of users trying out the solution
+...     Model explanation
+...     Interactive demo ('streamlit app')
 
 
 ### Methodology
 
 ... High-level diagrams of entire process:
-...     Genetic Data 
-        1. Data Acquisition and Preprocessing
+...     1. Data Acquisition, EDA, and Preprocessing
         2. Research / Domain Knowledge
         3. Feature Engineering
-        4. Model Training
+        4. Address class imbalance (SMOTE / undersampling)
+        5. Model Training
             a. Logistic Regression
             b. Decision Tree
             c. K Nearest Neighbors
-        5. Model Evaluation
-
-...     Treatment Data
-        1. Data Acquisition and Preprocessing
-        2. Model Choice
-        3. Model Training
-        4. Model Evaluation
-        
-...     various modelling directions
-...     various prototyping directions
+        6. Model Evaluation
+        7. Additional modelling / tuning based on evaluation results
 
 
 ### Organization
+... Data
+... Notebooks
+    1. EDA / Preprocessing
+    2. Modelling
+... Slides / project presentation
 
 #### Repository 
 
 * `data` 
+    - https://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=phenDis&hgta_track=gdcCancer&hgta_table=allCancer&hgta_doSchema=describe+table+schema
     - https://docs.google.com/document/d/1YxfU2WQrP9JgYS0MiYoAdp6zUTAPDMq4n6r_pMbP9oI/edit?usp=sharing
 
 * `model`
     - `joblib` dump of final model(s)
 
 * `notebooks`
-    - contains all final notebooks involved in the project
+    - Preprocessing notebook
+    - Modelling notebook
 
 * `docs`
     - contains final report, presentations which summarize the project
@@ -79,9 +78,11 @@
 #### Dataset
 
 ... 
-    https://docs.google.com/document/d/1YxfU2WQrP9JgYS0MiYoAdp6zUTAPDMq4n6r_pMbP9oI/edit?usp=sharing
-
+- The data used is from the TCGA Pan-Cancer Atlas.
+- The dataset is accessible via the following link: https://genome.ucsc.edu/cgi-bin/hgTables?
+    
 ### Credits & References
 
 References
-    - 
+    - For additional references, see the following link: https://docs.google.com/document/d/1XN_xRrH_ivsEauc_diLaYyT3xW1zk5_sqR4RfbyeIhQ/edit?usp=sharing
+    
